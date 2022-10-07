@@ -4,42 +4,60 @@
 
 body {
     width: 100%;
-    height: 100vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.calculator {
-    width: 70%;
-    margin: auto;
-    padding: 40px;
-    background: #000;
-    border-radius: 40px;
-
+.main {
+    max-width: 360px;
+    padding: 4px;
+    margin-top: 50px;
+    background: rgb(39, 38, 38);
+    border-radius: 20px;
+    backdrop-filter: blur(50px);
 }
+
+.calculator {
+    padding: 10px;
+    padding-top: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgb(15, 15, 15);
+    backdrop-filter: blur(50px);
+    border: 10px solid rgba(110, 107, 107, 0.9);
+    background-clip: padding-box;
+}
+
+/* .calculator::after {
+    background: red;
+    width: 80px;
+    height: 80px;
+    display: block;
+} */
 
 .resultSection {
     width: 100%;
-    height: 90px;
     font-size: 30px;
     border: 0px solid white;
+    background: rgba(199, 243, 199, 0.616);
     /* border: none; */
     outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .resultShown {
     width: 100%;
-    height: 80px;
     border: none;
     font-size: 48px;
     text-align: right;
     padding: 0px 8px;
-    background: white;
+    background: rgba(199, 243, 199, 0.616);
+    margin: auto;
     /* overflow: scroll; */
-    
 }
 
 .btnSection {
@@ -47,23 +65,29 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 15px;
     margin-top: 14px;
 }
 
 .button {
-    font-size: 48px;
+    font-size: 20px;
     font-weight: bold;
     /* background-color: blue; */
-    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background: rgb(139, 139, 139, 0.5);
+    color: white;
 }
 
 .delBtn {
-    font-size: 35px;
+    font-size: 20px;
 }
 
 .greenBtn {
-    background: rgb(191, 233, 191);
+    background: rgb(191, 233, 191, 0.8);
+    color: black;
 }
 
 .equalToBtn {
